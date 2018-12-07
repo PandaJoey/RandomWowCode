@@ -280,3 +280,29 @@ print(math.sqrt(169)
 	print(math.sqrt(2))
 	1.4142135623731
 
+--function to round
+function round(num, idp)
+	local mult = 10 ˆ (idp or 0)
+	return math.floor(num * mult + 0.5) / mult
+end
+
+--utlitity functions for develops in wow
+
+-- takes in a string and splits it into seperate strings based
+-- on the seperator sep
+strsplit(sep, str)
+
+-- takes a list of strings and concats them based ob sep
+strjoin(sep, ...)
+
+-- concatinates multiple strings does not leave spaces unless specified
+strconcat(...)
+
+--depricated
+getglobal(name)
+
+-- takes a var name a a string with a value and sets it to that var name
+setglobal(name, value)
+
+-- used to debug using a stack trace
+debugstack([start[, count1[, count2]]])
